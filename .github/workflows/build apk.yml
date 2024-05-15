@@ -1,5 +1,13 @@
 on:
-  push
+  workflow_dispatch:
+    inputs:
+      profile:
+        type: choice
+        description: Build profile to use
+        options:
+          - development
+          - preview
+          - production
 
 name: Build APK 
 jobs:
